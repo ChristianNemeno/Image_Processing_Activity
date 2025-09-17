@@ -33,6 +33,7 @@
             this.buttonLoad = new System.Windows.Forms.Button();
             this.buttonCopy = new System.Windows.Forms.Button();
             this.buttonGreyScale = new System.Windows.Forms.Button();
+            this.buttonInversion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -85,11 +86,22 @@
             this.buttonGreyScale.UseVisualStyleBackColor = true;
             this.buttonGreyScale.Click += new System.EventHandler(this.buttonGreyScale_Click);
             // 
+            // buttonInversion
+            // 
+            this.buttonInversion.Location = new System.Drawing.Point(464, 295);
+            this.buttonInversion.Name = "buttonInversion";
+            this.buttonInversion.Size = new System.Drawing.Size(75, 64);
+            this.buttonInversion.TabIndex = 5;
+            this.buttonInversion.Text = "Color Inversion";
+            this.buttonInversion.UseVisualStyleBackColor = true;
+            this.buttonInversion.Click += new System.EventHandler(this.buttonInversion_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonInversion);
             this.Controls.Add(this.buttonGreyScale);
             this.Controls.Add(this.buttonCopy);
             this.Controls.Add(this.buttonLoad);
@@ -110,6 +122,7 @@
         private System.Windows.Forms.Button buttonLoad;
         private System.Windows.Forms.Button buttonCopy;
         private System.Windows.Forms.Button buttonGreyScale;
+        private System.Windows.Forms.Button buttonInversion;
     }
 }
 
