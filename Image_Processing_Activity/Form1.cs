@@ -50,5 +50,32 @@ namespace Image_Processing_Activity
 
             }
         }
+
+        private void buttonGreyScale_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                Bitmap ogImage = new Bitmap(pictureBox1.Image);
+
+                Bitmap toCopy = new Bitmap(ogImage.Width, ogImage.Height);
+
+                for (int y = 0; y < ogImage.Height; y++)
+                {
+                    for (int x = 0; x < ogImage.Width; x++)
+                    {
+                        Color px = ogImage.GetPixel(x, y);
+                        int gray = (px.R + px.G + px.B) / 3;
+
+                        Color newPx = Color.FromArgb(gray, gray, gray);
+
+                        toCopy.SetPixel(x, y, newPx);
+                    }
+                }
+
+                pictureBox2.Image = toCopy;
+                pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            }
+        }
     }
 }
