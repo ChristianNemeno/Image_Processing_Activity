@@ -36,6 +36,7 @@
             this.buttonInversion = new System.Windows.Forms.Button();
             this.buttonHistogram = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.buttonSepia = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -119,11 +120,22 @@
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
+            // buttonSepia
+            // 
+            this.buttonSepia.Location = new System.Drawing.Point(469, 537);
+            this.buttonSepia.Name = "buttonSepia";
+            this.buttonSepia.Size = new System.Drawing.Size(75, 65);
+            this.buttonSepia.TabIndex = 8;
+            this.buttonSepia.Text = "Sepia";
+            this.buttonSepia.UseVisualStyleBackColor = true;
+            this.buttonSepia.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 637);
+            this.Controls.Add(this.buttonSepia);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.buttonHistogram);
             this.Controls.Add(this.buttonInversion);
@@ -151,6 +163,7 @@
         private System.Windows.Forms.Button buttonInversion;
         private System.Windows.Forms.Button buttonHistogram;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button buttonSepia;
     }
 }
 

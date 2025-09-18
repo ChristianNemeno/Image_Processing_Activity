@@ -172,27 +172,7 @@ namespace Image_Processing_Activity
                 g.DrawLine(Pens.Black, marginLeft, marginTop + graphHeight, marginLeft + graphWidth, marginTop + graphHeight); // X-axis
                 g.DrawLine(Pens.Black, marginLeft, marginTop, marginLeft, marginTop + graphHeight); 
 
-                using (Font axisFont = new Font("Arial", 8))
-                using (Brush textBrush = Brushes.Black)
-                using (StringFormat format = new StringFormat())
-                {
-                    format.Alignment = StringAlignment.Center;
-                    g.DrawString("Intensity", axisFont, textBrush, marginLeft + graphWidth / 2, marginTop + graphHeight + 15, format);
-                    g.DrawString("0", axisFont, textBrush, marginLeft, marginTop + graphHeight + 5);
-                    g.DrawString("128", axisFont, textBrush, marginLeft + 128, marginTop + graphHeight + 5, format);
-                    g.DrawString("255", axisFont, textBrush, marginLeft + 255, marginTop + graphHeight + 5, format);
-
-                    format.Alignment = StringAlignment.Near;
-                    g.DrawString("0", axisFont, textBrush, marginLeft - 15, marginTop + graphHeight - 10, format);
-                    g.DrawString(maxFrequency.ToString(), axisFont, textBrush, marginLeft - 35, marginTop, format);
-
-                    GraphicsState state = g.Save(); 
-                    g.TranslateTransform(15, marginTop + graphHeight / 2); 
-                    g.RotateTransform(-90); 
-                    format.Alignment = StringAlignment.Center;
-                    g.DrawString("Frequency", axisFont, textBrush, 0, 0, format);
-                    g.Restore(state); // Restore back to normal
-                }
+                
             }
 
             
@@ -207,6 +187,42 @@ namespace Image_Processing_Activity
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                Bitmap ogImage = new Bitmap(pictureBox1.Image);
+
+                Bitmap toCopy = new Bitmap(ogImage.Width, ogImage.Height);
+
+                for (int y = 0; y < ogImage.Height; y++)
+                {
+                    for (int x = 0; x < ogImage.Width; x++)
+                    {
+                        Color originalPixel = ogImage.GetPixel(x, y);
+                        //int gray = (px.R + px.G + px.B) / 3;
+
+                        int tempRed = (int)((originalPixel.R * 0.393) + (originalPixel.G * 0.769) + (originalPixel.B * 0.189));
+                        int tempGreen = (int)((originalPixel.R * 0.349) + (originalPixel.G * 0.686) + (originalPixel.B * 0.168));
+                        int tempBlue = (int)((originalPixel.R * 0.272) + (originalPixel.G * 0.534) + (originalPixel.B * 0.131));
+
+                        int newRed = tempRed > 255 ? 255 : tempRed;
+                        int newGreen = tempGreen > 255 ? 255 : tempGreen;
+                        int newBlue = tempBlue > 255 ? 255 : tempBlue;
+                        
+                        Color newPx = Color.FromArgb(newRed, newGreen, newBlue);
+
+                        toCopy.SetPixel(x, y, newPx);
+                    }
+                }
+
+                pictureBox2.Image = toCopy;
+                pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            }
 
         }
     }
