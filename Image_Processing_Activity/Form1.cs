@@ -19,7 +19,7 @@ namespace Image_Processing_Activity
         }
 
         private void button1_Click(object sender, EventArgs e)
-        { // this button is for load image
+        { 
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
             if(ofd.ShowDialog() == DialogResult.OK)

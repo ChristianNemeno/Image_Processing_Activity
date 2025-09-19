@@ -52,6 +52,7 @@
             // 
             // pictureBoxImage
             // 
+            this.pictureBoxImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxImage.Location = new System.Drawing.Point(30, 146);
             this.pictureBoxImage.Name = "pictureBoxImage";
             this.pictureBoxImage.Size = new System.Drawing.Size(256, 209);
@@ -60,6 +61,7 @@
             // 
             // pictureBoxBG
             // 
+            this.pictureBoxBG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxBG.Location = new System.Drawing.Point(329, 146);
             this.pictureBoxBG.Name = "pictureBoxBG";
             this.pictureBoxBG.Size = new System.Drawing.Size(245, 209);
@@ -68,6 +70,7 @@
             // 
             // pictureBoxSubtract
             // 
+            this.pictureBoxSubtract.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxSubtract.Location = new System.Drawing.Point(635, 146);
             this.pictureBoxSubtract.Name = "pictureBoxSubtract";
             this.pictureBoxSubtract.Size = new System.Drawing.Size(246, 209);
@@ -82,6 +85,7 @@
             this.buttonLoadImage.TabIndex = 4;
             this.buttonLoadImage.Text = "Load Image";
             this.buttonLoadImage.UseVisualStyleBackColor = true;
+            this.buttonLoadImage.Click += new System.EventHandler(this.buttonLoadImage_Click);
             // 
             // buttonLoadBackground
             // 
@@ -91,6 +95,7 @@
             this.buttonLoadBackground.TabIndex = 5;
             this.buttonLoadBackground.Text = "Load Background";
             this.buttonLoadBackground.UseVisualStyleBackColor = true;
+            this.buttonLoadBackground.Click += new System.EventHandler(this.buttonLoadBackground_Click);
             // 
             // buttonSubtract
             // 
