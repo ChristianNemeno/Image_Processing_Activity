@@ -28,6 +28,7 @@ namespace Image_Processing_Activity
             this.Close();
         }
 
+       
         private void buttonLoadImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -50,6 +51,48 @@ namespace Image_Processing_Activity
                 pictureBoxBG.Image = imageA;
                 pictureBoxBG.SizeMode = PictureBoxSizeMode.StretchImage;
             }
+        }
+
+        private void buttonSubtract_Click(object sender, EventArgs e)
+        {
+            if (imageB == null || imageA == null)
+            {
+                MessageBox.Show("Please load both an image and a background.");
+                return;
+            }
+
+            resultImage = new Bitmap(imageB.Width, imageB.Height);
+
+            Color mygreen = Color.FromArgb(0, 255, 0);
+            int greygreen = (mygreen.R + mygreen.G + mygreen.B) / 3;
+            int threshold = 5;
+
+
+            for(int x = 0; x < resultImage.Width; x++)
+            {
+                for(int y = 0; y < resultImage.Height; y++)
+                {
+                    Color pixel = imageB.GetPixel(x, y);
+                    Color backPixel = imageA.GetPixel(x, y);
+
+                    int grey= (pixel.R + pixel.G + pixel.B) / 3;
+                    int subtractvalue = Math.Abs(grey- greygreen);
+
+
+                    if(subtractvalue > threshold)
+                    {
+                        resultImage.SetPixel(x, y, pixel);
+                    }
+                    else
+                    {
+                        resultImage.SetPixel(x, y, backPixel);
+                    }
+
+
+                }
+            }
+            pictureBoxSubtract.Image = resultImage;
+            pictureBoxSubtract.SizeMode = PictureBoxSizeMode.StretchImage;
         }
     }
 }

@@ -105,6 +105,7 @@
             this.buttonSubtract.TabIndex = 6;
             this.buttonSubtract.Text = "Subtract";
             this.buttonSubtract.UseVisualStyleBackColor = true;
+            this.buttonSubtract.Click += new System.EventHandler(this.buttonSubtract_Click);
             // 
             // Form2
             // 
