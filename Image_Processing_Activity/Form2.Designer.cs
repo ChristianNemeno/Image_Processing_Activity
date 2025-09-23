@@ -35,6 +35,7 @@
             this.buttonLoadImage = new System.Windows.Forms.Button();
             this.buttonLoadBackground = new System.Windows.Forms.Button();
             this.buttonSubtract = new System.Windows.Forms.Button();
+            this.buttonCamera = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSubtract)).BeginInit();
@@ -107,11 +108,22 @@
             this.buttonSubtract.UseVisualStyleBackColor = true;
             this.buttonSubtract.Click += new System.EventHandler(this.buttonSubtract_Click);
             // 
+            // buttonCamera
+            // 
+            this.buttonCamera.Location = new System.Drawing.Point(107, 463);
+            this.buttonCamera.Name = "buttonCamera";
+            this.buttonCamera.Size = new System.Drawing.Size(75, 48);
+            this.buttonCamera.TabIndex = 7;
+            this.buttonCamera.Text = "Start Camera";
+            this.buttonCamera.UseVisualStyleBackColor = true;
+            this.buttonCamera.Click += new System.EventHandler(this.buttonCamera_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 652);
+            this.Controls.Add(this.buttonCamera);
             this.Controls.Add(this.buttonSubtract);
             this.Controls.Add(this.buttonLoadBackground);
             this.Controls.Add(this.buttonLoadImage);
@@ -137,5 +149,6 @@
         private System.Windows.Forms.Button buttonLoadImage;
         private System.Windows.Forms.Button buttonLoadBackground;
         private System.Windows.Forms.Button buttonSubtract;
+        private System.Windows.Forms.Button buttonCamera;
     }
 }
