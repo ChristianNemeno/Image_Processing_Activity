@@ -43,6 +43,7 @@
             this.buttonSharpen = new System.Windows.Forms.Button();
             this.buttonEmboss = new System.Windows.Forms.Button();
             this.buttonEmbossHorz = new System.Windows.Forms.Button();
+            this.buttonEmbossAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -196,11 +197,22 @@
             this.buttonEmbossHorz.UseVisualStyleBackColor = true;
             this.buttonEmbossHorz.Click += new System.EventHandler(this.buttonEmbossHorz_Click);
             // 
+            // buttonEmbossAll
+            // 
+            this.buttonEmbossAll.Location = new System.Drawing.Point(185, 455);
+            this.buttonEmbossAll.Name = "buttonEmbossAll";
+            this.buttonEmbossAll.Size = new System.Drawing.Size(75, 61);
+            this.buttonEmbossAll.TabIndex = 15;
+            this.buttonEmbossAll.Text = "All direction";
+            this.buttonEmbossAll.UseVisualStyleBackColor = true;
+            this.buttonEmbossAll.Click += new System.EventHandler(this.buttonEmbossAll_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 637);
+            this.Controls.Add(this.buttonEmbossAll);
             this.Controls.Add(this.buttonEmbossHorz);
             this.Controls.Add(this.buttonEmboss);
             this.Controls.Add(this.buttonSharpen);
@@ -242,6 +254,7 @@
         private System.Windows.Forms.Button buttonSharpen;
         private System.Windows.Forms.Button buttonEmboss;
         private System.Windows.Forms.Button buttonEmbossHorz;
+        private System.Windows.Forms.Button buttonEmbossAll;
     }
 }
 
