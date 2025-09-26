@@ -46,6 +46,7 @@
             this.buttonEmbossAll = new System.Windows.Forms.Button();
             this.buttonMeanRemoval = new System.Windows.Forms.Button();
             this.buttonEmbossLossy = new System.Windows.Forms.Button();
+            this.buttonHorizontalOnly = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -229,11 +230,22 @@
             this.buttonEmbossLossy.UseVisualStyleBackColor = true;
             this.buttonEmbossLossy.Click += new System.EventHandler(this.buttonEmbossLossy_Click);
             // 
+            // buttonHorizontalOnly
+            // 
+            this.buttonHorizontalOnly.Location = new System.Drawing.Point(349, 455);
+            this.buttonHorizontalOnly.Name = "buttonHorizontalOnly";
+            this.buttonHorizontalOnly.Size = new System.Drawing.Size(75, 61);
+            this.buttonHorizontalOnly.TabIndex = 18;
+            this.buttonHorizontalOnly.Text = "Horizontal Only";
+            this.buttonHorizontalOnly.UseVisualStyleBackColor = true;
+            this.buttonHorizontalOnly.Click += new System.EventHandler(this.buttonHorizontalOnly_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 637);
+            this.Controls.Add(this.buttonHorizontalOnly);
             this.Controls.Add(this.buttonEmbossLossy);
             this.Controls.Add(this.buttonMeanRemoval);
             this.Controls.Add(this.buttonEmbossAll);
@@ -281,6 +293,7 @@
         private System.Windows.Forms.Button buttonEmbossAll;
         private System.Windows.Forms.Button buttonMeanRemoval;
         private System.Windows.Forms.Button buttonEmbossLossy;
+        private System.Windows.Forms.Button buttonHorizontalOnly;
     }
 }
 
