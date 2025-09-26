@@ -259,7 +259,7 @@ namespace Image_Processing_Activity
 
                 ConvMatrix matrix = new ConvMatrix();
 
-                matrix.SetAll(1);
+                
 
                 matrix.TopLeft = 1;
                 matrix.TopMid = 2;
@@ -291,7 +291,7 @@ namespace Image_Processing_Activity
 
                 ConvMatrix matrix = new ConvMatrix();
 
-                matrix.SetAll(1);
+                
 
                 
                 matrix.TopMid = -2;
@@ -319,7 +319,7 @@ namespace Image_Processing_Activity
 
                 ConvMatrix matrix = new ConvMatrix();
 
-                matrix.SetAll(1);
+                
 
 
                 matrix.TopLeft= -1;
@@ -347,7 +347,6 @@ namespace Image_Processing_Activity
 
                 ConvMatrix matrix = new ConvMatrix();
 
-                matrix.SetAll(1);
 
 
                 matrix.TopMid = -1;
