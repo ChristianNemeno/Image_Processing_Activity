@@ -419,5 +419,37 @@ namespace Image_Processing_Activity
 
             }
         }
+
+        private void buttonEmbossLossy_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                Bitmap processedImage = new Bitmap(pictureBox1.Image);
+
+                ConvMatrix matrix = new ConvMatrix();
+
+                
+                matrix.TopRight = 1;
+                matrix.TopMid = -2;
+                matrix.TopLeft = 1;
+
+                matrix.MidRight = -2;
+                matrix.Pixel = 4;
+                matrix.MidLeft = -2;
+
+                matrix.BottomRight = -2;
+                matrix.BottomMid = 1;
+                matrix.BottomLeft = -2;
+
+                matrix.Factor = 1;
+                matrix.Offset = 127;
+
+                BitmapFilter.Conv3x3(processedImage, matrix);
+
+                pictureBox2.Image = processedImage;
+                pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            }
+        }
     }
 }

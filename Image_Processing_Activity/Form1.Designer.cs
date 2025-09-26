@@ -45,6 +45,7 @@
             this.buttonEmbossHorz = new System.Windows.Forms.Button();
             this.buttonEmbossAll = new System.Windows.Forms.Button();
             this.buttonMeanRemoval = new System.Windows.Forms.Button();
+            this.buttonEmbossLossy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -218,11 +219,22 @@
             this.buttonMeanRemoval.UseVisualStyleBackColor = true;
             this.buttonMeanRemoval.Click += new System.EventHandler(this.buttonMeanRemoval_Click);
             // 
+            // buttonEmbossLossy
+            // 
+            this.buttonEmbossLossy.Location = new System.Drawing.Point(267, 454);
+            this.buttonEmbossLossy.Name = "buttonEmbossLossy";
+            this.buttonEmbossLossy.Size = new System.Drawing.Size(75, 62);
+            this.buttonEmbossLossy.TabIndex = 17;
+            this.buttonEmbossLossy.Text = "Lossy";
+            this.buttonEmbossLossy.UseVisualStyleBackColor = true;
+            this.buttonEmbossLossy.Click += new System.EventHandler(this.buttonEmbossLossy_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 637);
+            this.Controls.Add(this.buttonEmbossLossy);
             this.Controls.Add(this.buttonMeanRemoval);
             this.Controls.Add(this.buttonEmbossAll);
             this.Controls.Add(this.buttonEmbossHorz);
@@ -268,6 +280,7 @@
         private System.Windows.Forms.Button buttonEmbossHorz;
         private System.Windows.Forms.Button buttonEmbossAll;
         private System.Windows.Forms.Button buttonMeanRemoval;
+        private System.Windows.Forms.Button buttonEmbossLossy;
     }
 }
 
