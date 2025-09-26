@@ -47,6 +47,7 @@
             this.buttonMeanRemoval = new System.Windows.Forms.Button();
             this.buttonEmbossLossy = new System.Windows.Forms.Button();
             this.buttonHorizontalOnly = new System.Windows.Forms.Button();
+            this.buttonVertOnly = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -240,11 +241,22 @@
             this.buttonHorizontalOnly.UseVisualStyleBackColor = true;
             this.buttonHorizontalOnly.Click += new System.EventHandler(this.buttonHorizontalOnly_Click);
             // 
+            // buttonVertOnly
+            // 
+            this.buttonVertOnly.Location = new System.Drawing.Point(428, 454);
+            this.buttonVertOnly.Name = "buttonVertOnly";
+            this.buttonVertOnly.Size = new System.Drawing.Size(75, 62);
+            this.buttonVertOnly.TabIndex = 19;
+            this.buttonVertOnly.Text = "Vertical Only";
+            this.buttonVertOnly.UseVisualStyleBackColor = true;
+            this.buttonVertOnly.Click += new System.EventHandler(this.buttonVertOnly_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 637);
+            this.Controls.Add(this.buttonVertOnly);
             this.Controls.Add(this.buttonHorizontalOnly);
             this.Controls.Add(this.buttonEmbossLossy);
             this.Controls.Add(this.buttonMeanRemoval);
@@ -294,6 +306,7 @@
         private System.Windows.Forms.Button buttonMeanRemoval;
         private System.Windows.Forms.Button buttonEmbossLossy;
         private System.Windows.Forms.Button buttonHorizontalOnly;
+        private System.Windows.Forms.Button buttonVertOnly;
     }
 }
 
