@@ -338,5 +338,33 @@ namespace Image_Processing_Activity
 
             }
         }
+
+        private void buttonEmbossHorz_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                Bitmap processedImage = new Bitmap(pictureBox1.Image);
+
+                ConvMatrix matrix = new ConvMatrix();
+
+                matrix.SetAll(1);
+
+
+                matrix.TopMid = -1;
+                matrix.MidLeft = -1;
+                matrix.Pixel = 4;
+                matrix.MidRight = -1;
+                matrix.BottomMid = -1;
+
+                matrix.Factor = 1;
+                matrix.Offset = 127;
+
+                BitmapFilter.Conv3x3(processedImage, matrix);
+
+                pictureBox2.Image = processedImage;
+                pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            }
+        }
     }
 }

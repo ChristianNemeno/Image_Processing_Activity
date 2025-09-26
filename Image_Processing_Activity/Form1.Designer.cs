@@ -42,6 +42,7 @@
             this.buttonBlur = new System.Windows.Forms.Button();
             this.buttonSharpen = new System.Windows.Forms.Button();
             this.buttonEmboss = new System.Windows.Forms.Button();
+            this.buttonEmbossHorz = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -185,11 +186,22 @@
             this.buttonEmboss.UseVisualStyleBackColor = true;
             this.buttonEmboss.Click += new System.EventHandler(this.buttonEmboss_Click);
             // 
+            // buttonEmbossHorz
+            // 
+            this.buttonEmbossHorz.Location = new System.Drawing.Point(103, 455);
+            this.buttonEmbossHorz.Name = "buttonEmbossHorz";
+            this.buttonEmbossHorz.Size = new System.Drawing.Size(75, 61);
+            this.buttonEmbossHorz.TabIndex = 14;
+            this.buttonEmbossHorz.Text = "Horz/Vertical";
+            this.buttonEmbossHorz.UseVisualStyleBackColor = true;
+            this.buttonEmbossHorz.Click += new System.EventHandler(this.buttonEmbossHorz_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 637);
+            this.Controls.Add(this.buttonEmbossHorz);
             this.Controls.Add(this.buttonEmboss);
             this.Controls.Add(this.buttonSharpen);
             this.Controls.Add(this.buttonBlur);
@@ -229,6 +241,7 @@
         private System.Windows.Forms.Button buttonBlur;
         private System.Windows.Forms.Button buttonSharpen;
         private System.Windows.Forms.Button buttonEmboss;
+        private System.Windows.Forms.Button buttonEmbossHorz;
     }
 }
 
