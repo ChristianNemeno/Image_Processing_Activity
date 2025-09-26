@@ -40,8 +40,8 @@
             this.buttonChangeForm2 = new System.Windows.Forms.Button();
             this.Smooth = new System.Windows.Forms.Button();
             this.buttonBlur = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonSharpen = new System.Windows.Forms.Button();
+            this.buttonEmboss = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -50,7 +50,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 190);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 60);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(258, 200);
             this.pictureBox1.TabIndex = 0;
@@ -59,7 +59,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(331, 190);
+            this.pictureBox2.Location = new System.Drawing.Point(333, 60);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(264, 200);
             this.pictureBox2.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             // buttonLoad
             // 
-            this.buttonLoad.Location = new System.Drawing.Point(21, 537);
+            this.buttonLoad.Location = new System.Drawing.Point(21, 315);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(75, 65);
             this.buttonLoad.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             // buttonCopy
             // 
-            this.buttonCopy.Location = new System.Drawing.Point(102, 537);
+            this.buttonCopy.Location = new System.Drawing.Point(102, 315);
             this.buttonCopy.Name = "buttonCopy";
             this.buttonCopy.Size = new System.Drawing.Size(75, 65);
             this.buttonCopy.TabIndex = 3;
@@ -88,7 +88,7 @@
             // 
             // buttonGreyScale
             // 
-            this.buttonGreyScale.Location = new System.Drawing.Point(183, 537);
+            this.buttonGreyScale.Location = new System.Drawing.Point(183, 315);
             this.buttonGreyScale.Name = "buttonGreyScale";
             this.buttonGreyScale.Size = new System.Drawing.Size(73, 64);
             this.buttonGreyScale.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             // buttonInversion
             // 
-            this.buttonInversion.Location = new System.Drawing.Point(262, 538);
+            this.buttonInversion.Location = new System.Drawing.Point(262, 316);
             this.buttonInversion.Name = "buttonInversion";
             this.buttonInversion.Size = new System.Drawing.Size(75, 64);
             this.buttonInversion.TabIndex = 5;
@@ -108,7 +108,7 @@
             // 
             // buttonHistogram
             // 
-            this.buttonHistogram.Location = new System.Drawing.Point(343, 537);
+            this.buttonHistogram.Location = new System.Drawing.Point(343, 316);
             this.buttonHistogram.Name = "buttonHistogram";
             this.buttonHistogram.Size = new System.Drawing.Size(79, 64);
             this.buttonHistogram.TabIndex = 6;
@@ -119,7 +119,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(627, 190);
+            this.pictureBox3.Location = new System.Drawing.Point(640, 60);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(264, 200);
             this.pictureBox3.TabIndex = 7;
@@ -127,7 +127,7 @@
             // 
             // buttonSepia
             // 
-            this.buttonSepia.Location = new System.Drawing.Point(428, 538);
+            this.buttonSepia.Location = new System.Drawing.Point(428, 316);
             this.buttonSepia.Name = "buttonSepia";
             this.buttonSepia.Size = new System.Drawing.Size(75, 65);
             this.buttonSepia.TabIndex = 8;
@@ -137,7 +137,7 @@
             // 
             // buttonChangeForm2
             // 
-            this.buttonChangeForm2.Location = new System.Drawing.Point(842, 539);
+            this.buttonChangeForm2.Location = new System.Drawing.Point(509, 318);
             this.buttonChangeForm2.Name = "buttonChangeForm2";
             this.buttonChangeForm2.Size = new System.Drawing.Size(75, 63);
             this.buttonChangeForm2.TabIndex = 9;
@@ -147,7 +147,7 @@
             // 
             // Smooth
             // 
-            this.Smooth.Location = new System.Drawing.Point(510, 539);
+            this.Smooth.Location = new System.Drawing.Point(102, 386);
             this.Smooth.Name = "Smooth";
             this.Smooth.Size = new System.Drawing.Size(75, 62);
             this.Smooth.TabIndex = 10;
@@ -157,7 +157,7 @@
             // 
             // buttonBlur
             // 
-            this.buttonBlur.Location = new System.Drawing.Point(592, 539);
+            this.buttonBlur.Location = new System.Drawing.Point(21, 386);
             this.buttonBlur.Name = "buttonBlur";
             this.buttonBlur.Size = new System.Drawing.Size(75, 62);
             this.buttonBlur.TabIndex = 11;
@@ -165,31 +165,33 @@
             this.buttonBlur.UseVisualStyleBackColor = true;
             this.buttonBlur.Click += new System.EventHandler(this.buttonBlur_Click);
             // 
-            // button3
+            // buttonSharpen
             // 
-            this.button3.Location = new System.Drawing.Point(674, 539);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 62);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonSharpen.Location = new System.Drawing.Point(21, 522);
+            this.buttonSharpen.Name = "buttonSharpen";
+            this.buttonSharpen.Size = new System.Drawing.Size(75, 62);
+            this.buttonSharpen.TabIndex = 12;
+            this.buttonSharpen.Text = "Sharpen";
+            this.buttonSharpen.UseVisualStyleBackColor = true;
+            this.buttonSharpen.Click += new System.EventHandler(this.buttonSharpen_Click);
             // 
-            // button4
+            // buttonEmboss
             // 
-            this.button4.Location = new System.Drawing.Point(756, 539);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 62);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonEmboss.Location = new System.Drawing.Point(21, 454);
+            this.buttonEmboss.Name = "buttonEmboss";
+            this.buttonEmboss.Size = new System.Drawing.Size(75, 62);
+            this.buttonEmboss.TabIndex = 13;
+            this.buttonEmboss.Text = "Emboss";
+            this.buttonEmboss.UseVisualStyleBackColor = true;
+            this.buttonEmboss.Click += new System.EventHandler(this.buttonEmboss_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 637);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.buttonEmboss);
+            this.Controls.Add(this.buttonSharpen);
             this.Controls.Add(this.buttonBlur);
             this.Controls.Add(this.Smooth);
             this.Controls.Add(this.buttonChangeForm2);
@@ -225,8 +227,8 @@
         private System.Windows.Forms.Button buttonChangeForm2;
         private System.Windows.Forms.Button Smooth;
         private System.Windows.Forms.Button buttonBlur;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonSharpen;
+        private System.Windows.Forms.Button buttonEmboss;
     }
 }
 
