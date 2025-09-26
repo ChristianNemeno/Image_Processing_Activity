@@ -392,5 +392,32 @@ namespace Image_Processing_Activity
 
             }
         }
+
+        private void buttonMeanRemoval_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                Bitmap processedImage = new Bitmap(pictureBox1.Image);
+
+                ConvMatrix matrix = new ConvMatrix();
+
+               
+
+                matrix.SetAll(-1);
+
+
+                matrix.Pixel = 9;
+
+
+                matrix.Factor = 1;
+                matrix.Offset = 0;
+
+                BitmapFilter.Conv3x3(processedImage, matrix);
+
+                pictureBox2.Image = processedImage;
+                pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            }
+        }
     }
 }
