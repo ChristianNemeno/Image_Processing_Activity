@@ -236,5 +236,54 @@ namespace Image_Processing_Activity
             this.Close();
             
         }
+
+        private void Smooth_Click(object sender, EventArgs e)
+        {
+            if(pictureBox1.Image != null)
+            {
+                Bitmap processedImage = new Bitmap(pictureBox1.Image);
+
+                BitmapFilter.Smooth(processedImage, 1);
+
+                pictureBox2.Image = processedImage;
+                pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            }
+        }
+
+        private void buttonBlur_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null) 
+            {
+                Bitmap processedImage = new Bitmap(pictureBox1.Image);
+
+                ConvMatrix matrix = new ConvMatrix();
+
+                matrix.SetAll(1);
+
+                matrix.TopLeft = 1;
+                matrix.TopMid = 2;
+                matrix.TopRight = 1;
+                matrix.MidLeft = 2;
+                matrix.Pixel = 4;
+                matrix.MidRight = 2;
+                matrix.BottomLeft = 1;
+                matrix.BottomMid = 2;
+                matrix.BottomRight = 1;
+
+                matrix.Factor = 16;
+                matrix.Offset = 0;
+
+                BitmapFilter.Conv3x3(processedImage, matrix);
+
+                pictureBox2.Image = processedImage;
+                pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+                
+            }
+
+            
+
+
+        }
     }
 }
