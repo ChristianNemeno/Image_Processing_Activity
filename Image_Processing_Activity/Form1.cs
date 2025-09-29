@@ -503,5 +503,37 @@ namespace Image_Processing_Activity
 
             }
         }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            if (pictureBox2.Image != null)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "JPEG Image|*.jpg|Bitmap Image|*.bmp|GIF Image|*.gif|PNG Image|*.png";
+                sfd.Title = "Save an Image File";
+                sfd.FileName = "processed_image"; 
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    string fileExtension = System.IO.Path.GetExtension(sfd.FileName).ToLower();
+                    System.Drawing.Imaging.ImageFormat imageFormat = System.Drawing.Imaging.ImageFormat.Jpeg;
+
+                    switch (fileExtension)
+                    {
+                        case ".bmp":
+                            imageFormat = System.Drawing.Imaging.ImageFormat.Bmp;
+                            break;
+                        case ".gif":
+                            imageFormat = System.Drawing.Imaging.ImageFormat.Gif;
+                            break;
+                        case ".png":
+                            imageFormat = System.Drawing.Imaging.ImageFormat.Png;
+                            break;
+                    }
+
+                    pictureBox2.Image.Save(sfd.FileName, imageFormat);
+                }
+            }
+        }
     }
 }
